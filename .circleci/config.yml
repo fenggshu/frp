@@ -17,8 +17,10 @@ jobs:
     working_directory: /go/src/github.com/fatedier/frp
     steps:
       - checkout
-      - run: make
-      - run: make alltest
+      - run: make -f Makefile.cross-compiles
+      - store_artifacts:
+          path: /go/src/github.com/fatedier/frp/release/
+      
 
 workflows:
   version: 2
