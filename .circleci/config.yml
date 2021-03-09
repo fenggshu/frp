@@ -9,7 +9,7 @@ jobs:
       - run: make
       - run: make alltest
       - store_artifacts:
-          path: /go/src/github.com/fatedier/frp
+          path: /go/src/github.com/fatedier/frp/bin
       
   test2:
     docker:
