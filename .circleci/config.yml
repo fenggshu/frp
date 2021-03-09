@@ -8,6 +8,9 @@ jobs:
       - checkout
       - run: make
       - run: make alltest
+      - store_artifacts:
+          path: /go/src/github.com/fatedier/frp
+      
   test2:
     docker:
       - image: circleci/golang:1.14-node
